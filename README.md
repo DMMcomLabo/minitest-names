@@ -1,4 +1,6 @@
-# MinitestListnames
+[![Build Status](https://travis-ci.org/masami256/minitest-names.svg?branch=master)](https://travis-ci.org/masami256/minitest-names)
+
+# minitest-names
 
 TODO: Write a gem description
 
