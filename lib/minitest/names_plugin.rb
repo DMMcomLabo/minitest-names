@@ -2,18 +2,13 @@ require "minitest/names/version"
 
 module Minitest
   module Names
-    class << self
-      def test_with_names(names)
-        tmp = names.split(',')
-        tmp.map {|name| name.strip }
-      end
-    end
-
     module NamesExtendedRunnable
       def self.included base
         base.instance_eval do
           def self.run reporter, options = {}
             names = options[:filter]
+
+            return if names.nil? || names.empty?
 
             filtered_methods = []
 
@@ -48,6 +43,6 @@ module Minitest
 
     # Override Runnable class if names option is set
     Minitest::Runnable.send(:include, Minitest::Names::NamesExtendedRunnable)
-    options[:filter] = Minitest::Names.test_with_names(names)
+    options[:filter] =  names.split(',').map {|name| name.strip }
   end
 end
