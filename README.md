@@ -2,7 +2,11 @@
 
 # minitest-names
 
-TODO: Write a gem description
+It supports to run multiple testcases by it testcase names.
+The minitest supports regular expression to run some testcases with -n/--name option. However, sometime it's difficult to make regular expression for test.
+So, it would be nice to have a feature passing testcase names to run tests.
+
+minitest-names doesn't support regular expression.
 
 ## Installation
 
@@ -22,7 +26,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To pass testcase name which separated by comma.
+
+
+Using short option.
+```
+$ rake TESTOPTS="-N=\"test_say_hello, test_say_kiaora\""
+```
+
+Using long option.
+```
+rake TESTOPTS="--names=\"test_say_hello, test_say_kiaora\""
+```
+
+In the TESTOPTS option, you need to escape double quotation.
+
 
 ## Contributing
 
