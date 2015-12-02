@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "minitest-names"
   spec.version       = Minitest::Names::VERSION
   spec.authors       = ["Masami Ichikawa"]
-  spec.email         = ["masami256@gmail.com"]
+  spec.email         = ["ichikawa-masami@dmm.com"]
   spec.summary       = %q{Run tests by test names.}
   spec.description   = %q{Run test by test names. Test names are passed by command line aregument which is separated by commas.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/DMMcomLabo/minitest-names"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
